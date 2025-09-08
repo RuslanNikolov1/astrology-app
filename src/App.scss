@@ -1,0 +1,75 @@
+@import './styles/variables.scss';
+
+.App {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+// Smooth scrolling for the entire page
+html {
+  scroll-behavior: smooth;
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $dark-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gold-gradient;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, lighten($primary-gold, 10%), lighten(#ff8c42, 10%));
+}
+
+// Selection styling
+::selection {
+  background: rgba(255, 107, 53, 0.3);
+  color: $text-light;
+}
+
+::-moz-selection {
+  background: rgba(255, 107, 53, 0.3);
+  color: $text-light;
+}
+
+// Focus styles for accessibility
+*:focus {
+  outline: 2px solid $primary-gold;
+  outline-offset: 2px;
+}
+
+// Loading animation for images (if any are added later)
+img {
+  transition: opacity 0.3s ease;
+}
+
+img[loading] {
+  opacity: 0;
+}
+
+img:not([loading]) {
+  opacity: 1;
+}
+
+// Print styles
+@media print {
+  .floating-elements,
+  .scrollToTop {
+    display: none !important;
+  }
+  
+  .App {
+    background: white !important;
+    color: black !important;
+  }
+}
+

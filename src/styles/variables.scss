@@ -1,0 +1,44 @@
+// Color Palette
+$primary-gold: #ff4500;
+$accent-purple: #8b5cf6;
+$dark-bg: #0f0f23;
+$darker-bg: #1a1a3e;
+$deep-purple: #2d1b69;
+$text-light: #f8f9fa;
+$text-muted: #a0a0a0;
+$text-dark: #2c3e50;
+
+// Gradients
+$cosmic-gradient: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2d1b69 100%);
+$gold-gradient: linear-gradient(45deg, #ff4500, #ff6500);
+$purple-gradient: linear-gradient(45deg, #8b5cf6, #3b82f6);
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-xxl: 4rem;
+
+// Typography
+$font-primary: 'Inter', sans-serif;
+$font-display: 'Alchemy', 'Playfair Display', serif;
+
+// Breakpoints
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1200px;
+
+// Shadows
+$shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.1);
+$shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.15);
+$shadow-strong: 0 15px 50px rgba(0, 0, 0, 0.2);
+$shadow-glow: 0 0 20px rgba(255, 69, 0, 0.3);
+
+// Border Radius
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-xl: 16px;
+

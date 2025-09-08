@@ -1,0 +1,361 @@
+@import '../../styles/variables.scss';
+
+.contact {
+  padding: 100px 0;
+  background-image: url('../../assets/images/volcano.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 30% 30%, rgba(255, 69, 0, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 70% 70%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+      linear-gradient(135deg, rgba(45, 27, 105, 0.7) 0%, rgba(26, 26, 62, 0.8) 50%, rgba(15, 15, 35, 0.7) 100%);
+    pointer-events: none;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #ff4500, #ff6500, #ff4500, transparent);
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.textContent {
+  animation: fadeInLeft 1s ease-out;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: $text-light;
+  margin-bottom: 1.5rem;
+  font-family: 'Griffy', 'Horoscopicus', 'Playfair Display', serif;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: $gold-gradient;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: $text-muted;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.contactInfo {
+  margin-bottom: 3rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(255, 69, 0, 0.05);
+  border-radius: $radius-md;
+  border: 1px solid rgba(255, 69, 0, 0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 69, 0, 0.08);
+    border-color: rgba(255, 69, 0, 0.4);
+    transform: translateX(5px);
+  }
+}
+
+.contactIcon {
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 69, 0, 0.1);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 69, 0, 0.3);
+}
+
+.contactDetails {
+  h4 {
+    color: $text-light;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  p {
+    color: $text-muted;
+    font-size: 0.95rem;
+  }
+}
+
+.socialLinks {
+  h4 {
+    color: $text-light;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 69, 0, 0.05);
+  border: 1px solid rgba(255, 69, 0, 0.2);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 69, 0, 0.1);
+    border-color: $primary-gold;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 69, 0, 0.2);
+  }
+}
+
+.formContent {
+  animation: fadeInRight 1s ease-out 0.3s both;
+}
+
+.contactForm {
+  background: rgba(255, 69, 0, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 69, 0, 0.2);
+  border-radius: $radius-lg;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 69, 0, 0.05), transparent);
+    transition: left 0.5s ease;
+  }
+
+  &:hover::before {
+    left: 100%;
+  }
+}
+
+.formTitle {
+  font-family: 'Germania One', cursive;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $text-light;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.formLabel {
+  display: block;
+  color: $text-light;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 69, 0, 0.05);
+  border: 1px solid rgba(255, 69, 0, 0.3);
+  border-radius: $radius-md;
+  color: $text-light;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+
+  &::placeholder {
+    color: $text-muted;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $primary-gold;
+    background: rgba(255, 69, 0, 0.08);
+    box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.1);
+  }
+
+  &:hover {
+    border-color: rgba(255, 69, 0, 0.5);
+  }
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: $gold-gradient;
+  color: $dark-bg;
+  padding: 1.2rem 2rem;
+  border-radius: $radius-lg;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 69, 0, 0.2), transparent);
+    transition: left 0.5s ease;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 69, 0, 0.4);
+
+    &::before {
+      left: 100%;
+    }
+
+    .buttonIcon {
+      transform: rotate(15deg) scale(1.1);
+    }
+  }
+
+  .buttonText {
+    position: relative;
+    z-index: 1;
+  }
+
+  .buttonIcon {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+}
+
+// Animations
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 480px) {
+  .contactForm {
+    padding: 1.5rem;
+  }
+
+  .formTitle {
+    font-size: 1.5rem;
+  }
+
+  .contactItem {
+    padding: 0.8rem;
+  }
+
+  .contactIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
