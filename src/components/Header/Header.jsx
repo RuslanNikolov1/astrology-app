@@ -105,13 +105,16 @@ const Header = () => {
         </nav>
 
         <div className={styles.headerControls}>
-          <button 
-            className={styles.audioToggle}
-            onClick={toggleAudio}
-            aria-label={isPlaying ? "Pause audio" : "Play audio"}
-          >
-            {isPlaying ? '⏸️' : '▶️'}
-          </button>
+          <div className={styles.audioSection}>
+            <button 
+              className={styles.audioToggle}
+              onClick={toggleAudio}
+              aria-label={isPlaying ? "Pause audio" : "Play audio"}
+            >
+              {isPlaying ? '⏸️' : '▶️'}
+            </button>
+            <span className={styles.ambientLabel}>Ambient music</span>
+          </div>
           
           <button 
             className={styles.menuToggle}

@@ -153,6 +153,24 @@
   gap: 1rem;
 }
 
+.audioSection {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ambientLabel {
+  color: #f8f9fa;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
 .audioToggle {
   background: none;
   border: none;
